@@ -13,10 +13,10 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.SignatureException;
 import java.util.Random;
+import net.iharder.Base64;
 
 import com.opentok.exception.InvalidArgumentException;
 import com.opentok.util.Crypto;
-import org.apache.commons.codec.android.binary.Base64;
 
 import com.opentok.exception.OpenTokException;
 
@@ -174,7 +174,7 @@ public class Session {
             innerBuilder.append(dataStringBuilder.toString());
 
             tokenStringBuilder.append(
-                    Base64.encodeBase64String(
+                    Base64.encodeBytes(
                             innerBuilder.toString().getBytes("UTF-8")
                     )
                     .replace("+", "-")
