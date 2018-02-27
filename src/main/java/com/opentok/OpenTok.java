@@ -10,6 +10,7 @@ package com.opentok;
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.UnsupportedEncodingException;
+import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -129,7 +130,7 @@ public class OpenTok {
 
         try {
             sessionIdParts = Crypto.decodeSessionId(sessionId);
-        } catch (UnsupportedEncodingException e) {
+        } catch (IOException e) {
             throw new InvalidArgumentException("Session ID was not valid");
         }
         if (!sessionIdParts.contains(Integer.toString(this.apiKey))) {
