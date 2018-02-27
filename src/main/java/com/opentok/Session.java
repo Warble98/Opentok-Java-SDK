@@ -16,7 +16,7 @@ import java.util.Random;
 
 import com.opentok.exception.InvalidArgumentException;
 import com.opentok.util.Crypto;
-import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.codec.android.binary.Base64;
 
 import com.opentok.exception.OpenTokException;
 
