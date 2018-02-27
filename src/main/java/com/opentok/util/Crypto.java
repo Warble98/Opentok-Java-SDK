@@ -17,7 +17,7 @@ import java.util.Formatter;
 import java.util.List;
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
-import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.codec.android.binary.Base64;
 
 public class Crypto {
 	private static final String HMAC_SHA1_ALGORITHM = "HmacSHA1";
